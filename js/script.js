@@ -80,6 +80,31 @@ for (var i = 0; i < elencoStudenti.length; i++) {
 }
 
 
+// Step #3
+// Aggiungo nuovo oggetto (tramite richiesta a utente)
+
+//  ---> Richiesta dati utente (prompt: nome, cognome, età)
+var inputNome = prompt('Inserisci il tuo nome');
+var inputCognome = prompt('Inserisci il tuo cognome');
+var inputEta = parseInt(prompt('Inserisci la tua età'));
+
+//  ---> Creo un oggetto 'nuovoStudente' con i dati immessi dall'utente
+var nuovoStudente = {
+  'nome': inputNome,
+  'cognome': inputCognome,
+  'eta': inputEta,
+};
+// console.log(nuovoStudente);
+
+//  ---> inserisco il nuovo oggetto (nuovoStudente) nell'array di oggetti (elencoStudenti)
+elencoStudenti.push(nuovoStudente);
+
+//  ---> Stampo elenco aggiornato
+console.log('Elenco Studenti (aggiornato):');
+for (var i = 0; i < elencoStudenti.length; i++) {
+  var singoloStudente = elencoStudenti[i];
+  console.log(singoloStudente.nome + ' ' + singoloStudente.cognome);
+}
 
 
 
